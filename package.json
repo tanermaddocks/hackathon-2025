@@ -1,0 +1,25 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "The purpose of the app is to keep track of the books you have read and leave your own review for yourself or others. May also include a book wishlist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanermaddocks/hackathon-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanermaddocks/hackathon-2025/issues"
+  },
+  "homepage": "https://github.com/tanermaddocks/hackathon-2025#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.10.0"
+  }
+}
