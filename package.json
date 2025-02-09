@@ -4,7 +4,8 @@
   "description": "The purpose of the app is to keep track of the books you have read and leave your own review for yourself or others. May also include a book wishlist.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
   },
   "repository": {
     "type": "git",
