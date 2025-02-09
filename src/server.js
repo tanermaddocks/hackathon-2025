@@ -29,7 +29,12 @@ const {BookRouter} = require("./controllers/BookController.js");
 app.use("/books", BookRouter)
 
 
-
+// Wildcard
+app.get("*", (request, response) => {
+    console.log("User attempted to visit " + request.path);
+    response.send("<h2>Error 404: Page not found</h2>" + `<p>Attempted path: ${request.path}</p>`)
+}
+)
 
 
 // Error handler must be last
