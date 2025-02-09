@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 // MODELS go here
-const { UserModel } = require("./models/BookModel")
+const { BookModel } = require("./models/BookModel")
 
 
 

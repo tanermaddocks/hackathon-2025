@@ -9,7 +9,7 @@ app.use(express.json());
 const mongoose = require("mongoose");
 
 // Define URL
-let databaseUrl = "mongodb://localhost:27017/BookTracker-dev";
+let databaseUrl = "mongodb://localhost:27017/BookTracker";
 
 // Connect to URL
 const { connect } = require("./database.js");
@@ -24,6 +24,15 @@ app.get("/", (request, response) => {
     )
 })
 
+// Router imports
+const {BookRouter} = require("./controllers/BookController.js");
+app.use("/books", BookRouter)
+
+
+
+
+
+// Error handler must be last
 app.use((error, request, response, next) => {
     console.log("Error occured in the server.");
     console.log(JSON.stringify(error));
