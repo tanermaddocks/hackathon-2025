@@ -400,4 +400,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Bruno API tester
-bruno
+book_tracker_api
