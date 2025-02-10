@@ -20,6 +20,23 @@ router.get(
     }
 )
 
+// get all books but in html form - localhost:8200/books/all
+router.get(
+    "/one/print/:bookId",
+    async (request, response) => {
+        const book = await BookModel.findById(request.params.bookId);
+        response.send(
+            `<h3>${book.title}</h3>`
+            +`<ul>
+                <li>Author: ${book.author}</li>
+                <li>Category: ${(book.fiction) ? "Fiction" : "Non-Fiction"}</li>
+                <li>Genres: ${book.genres}</li>
+                <li>Rating: ${book.rating}</li>
+            </ul>`
+        );
+    }
+)
+
 router.post(
     "/",
     async (request, response) => {
